@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Vandal Hearts",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "vandal-hearts-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-00204"
+  }
+}

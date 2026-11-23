@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "vandal-hearts-psx",
+  "name": "Vandal Hearts",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "vandal-hearts-recomp",
+  "rom_identity": {
+    "crc32": [
+      "51e4d0e3"
+    ],
+    "md5": [
+      "dc077aa7a11e0b36c3cb434d64c9eae4"
+    ],
+    "sha1": [
+      "ffbabb7e86069d857e1e4812ddcdada25f5aaca6"
+    ],
+    "disc_serials": [
+      "SLES-00204"
+    ],
+    "sizes": [
+      658567056
+    ],
+    "filenames": [
+      "Vandal Hearts (Europe) (En,Fr,De).cue",
+      "Vandal Hearts (Europe) (En,Fr,De).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "b27d1e11df0086a3e2742a0bc47c82dff81800d952824421fa26d21e542cf9a7"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5552.BIN",
+    "profile": "SCPH5552",
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/vandal-hearts-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "vandal-hearts-*-windows-x64.zip",
+      "linux-x64": "vandal-hearts-*-linux-x64.zip",
+      "macos-arm64": "vandal-hearts-*-macos-arm64.zip",
+      "macos-x64": "vandal-hearts-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "vandal_hearts.exe",
+    "linux": "vandal_hearts",
+    "macos": "vandal_hearts"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/vandal-hearts-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
